@@ -59,9 +59,9 @@
   font-size: 15px;
   font-style: normal;
   line-height: 18px;
-  background-color: #69bf45;
+  background-color: transparent;
+  border: 1px solid #ffffff;
   border-radius: 5px;
-  border: none;
   cursor: pointer;
   margin-left: 5.8%;
 }
@@ -79,6 +79,11 @@
   border-radius: 5px;
   cursor: pointer;
   margin-left: 25px;
+}
+.reg_btn:hover, .log_btn:hover{
+  color: #ffffff;
+  background-color: #69BF45;
+  border:none;
 }
 .navs {
   width: 100%;
