@@ -6,6 +6,7 @@ import Work from '../landing/work/Work';
 import Stimul from '../landing/stimul/Stimul';
 import Mission from '../landing/mission/Mission';
 import Partners from '../landing/partners/Partners';
+import News from '../landing/news/News';
 
 
 
@@ -18,6 +19,7 @@ export default function Landing() {
         <Stimul />
         <Mission />
         <Partners />
+        <News />
      </div>
      )
  }
