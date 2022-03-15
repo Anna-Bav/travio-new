@@ -7,6 +7,7 @@ import Stimul from '../landing/stimul/Stimul';
 import Mission from '../landing/mission/Mission';
 import Partners from '../landing/partners/Partners';
 import News from '../landing/news/News';
+import Footer from '../landing/footer/Footer';
 
 
 
@@ -20,6 +21,7 @@ export default function Landing() {
         <Mission />
         <Partners />
         <News />
+        <Footer />
      </div>
      )
  }
