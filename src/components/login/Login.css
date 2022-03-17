@@ -1,18 +1,158 @@
-.login,
+/* .login,
+.login_inner,
+.login_inner1,
+.login_inner2,
 .login_travio {
   border: 1px solid blue;
-}
+} */
 .login {
   margin: 0 auto;
   width: 100%;
-  max-width: 1440px;
-  height: 700px;
-  background: #ffffff;
+  max-width: 1920px;
+  height: 846px;
+  background: linear-gradient(81.3deg, #b3d946 5.44%, #737dd4 98.03%);
   box-sizing: border-box;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  /* background-image: url("../../../public/images/background.svg"); */
+}
+.login_inner {
+  width: 27.1%;
+  height: 76.4%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("../../../public/images/background.svg");
+  justify-content: space-between;
+}
+.login_inner1 {
+  width: 100%;
+  height: 61.6%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+
+}
+.login_title {
+  color: #333333;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 31px;
+  font-style: normal;
+  line-height: 36.39px;
+  margin-top: 3.7%;
+}
+.mail_adress {
+  color: #a8a8a8;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 14.09px;
+}
+.input_mail,
+.input_password {
+  width: 88.5%;
+  border: none;
+  border-bottom: 1px solid #a8a8a8;
+  color: #333333;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 17.61px;
+}
+.input_mail:focus,
+.input_password:focus {
+  outline: 0;
+  outline-offset: 0;
+  color: #333333;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 17.61px;
+  border-bottom: 2px solid #398eb1;
+}
+.rememberMe {
+  width: 88.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.remember {
+  /* width:50%; */
+  color: #a8a8a8;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 17.61px;
+}
+/* .check{
+  
+} */
+.forget {
+  /* width:50%; */
+  color: #398eb1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 17.61px;
+}
+.login_btn {
+  width: 20.2%;
+  height: 10.1%;
+  background-color: #398eb1;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 18px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 3.7%;
+}
+.login_inner2 {
+  width: 100%;
+  height: 33.7%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+}
+.reg_text {
+  width: 89.5%;
+  color: #333333;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 31px;
+  font-style: normal;
+  line-height: 37px;
+  text-align: center;
+}
+.reg_btn {
+  width: 46.7%;
+  height: 24.8%;
+  border-radius: 5px;
+  background-color: #69bf45;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 21.6px;
+  cursor: pointer;
 }
 /* .logo {
   width: 100%;

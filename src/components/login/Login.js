@@ -66,36 +66,70 @@ export default function Login(props) {
     
    return(
        <div className='login'>
-           <div className='logo'>
-               <Link to='/landing'><img src='/images/logo.svg'/></Link></div>
-           <div className='login_travio'>
-               <div className='login_text'>Авторизация в TRAV.IO</div>
+           <div className='login_inner'>
+           {/* <div className='logo'>
+               <Link to='/landing'><img src='/images/logo.svg'/></Link>
+               </div> */}
+            
+               <div className='login_inner1'>
+               <div className='login_title'>Авторизация в TRAV.IO</div>
+               <div className='mail_adress'>Адрес электронной почты</div>
+               <input onChange = {e => emailHandler(e)} value={email} onBlur = {e => blurHandler(e)} className='input_mail' name='email' type='email'/>
+               {(emailDirty && emailError) && <div style={{color:'#EF3125', fontSize:'10px'}}>{emailError}</div>}
 
-               <input onChange = {e => emailHandler(e)} value={email} onBlur = {e => blurHandler(e)} className='input_mail' name='email' type='email' placeholder='E-mail'/>
-
-               {/* {(emailMessage) && <div style={{color: 'rgb(196, 196, 196, 0.5)', fontSize:'10px'}}>{emailMessage}</div>} */}
-           {(emailDirty && emailError) && <div style={{color:'#EF3125', fontSize:'10px'}}>{emailError}</div>}
-
-           
-               <input  onChange = {e => passwordHandler(e)} value={password} onBlur = {e => blurHandler(e)}  className='input_password' name='password'  type='password' placeholder='Пароль'/>
-
+               <div className='mail_adress'>Пароль</div>
+               <input  onChange = {e => passwordHandler(e)} value={password} onBlur = {e => blurHandler(e)}  className='input_password' name='password'  type='password'/>
                {(passwordDirty && passwordError) && <div style={{color:'#EF3125', fontSize:'10px'}}>{passwordError}</div>}
 
+
                <div className='rememberMe'>
+                    <div className='remember'><input className='check' type='checkbox'/>Запомнить меня</div>
+                    <div className="forget">Забыли пароль?</div>
+               </div>
+
+               {/* {(emailDirty && emailError) && <div style={{color:'#FE1313', fontSize:'12px'}}>{emailError}</div>}
+               {(passwordDirty && passwordError) && <div style={{color:'#FE1313', fontSize:'12px'}}>{passwordError}</div>} */}
+
+               <button disabled={!formValid} onClick={() => dispatch(login(email,password))}  className='login_btn'>Войти</button>
+
+
+
+               </div>
+
+               <div className='login_inner2'>
+               <div className='reg_text'>Еще нет аккаунта? Зарегистрируйтесь в TRAV.IO!</div>
+               <button className='reg_btn'>Зарегистрироваться</button>
+               </div>
+
+
+           {/* <div className='login_travio'> */}
+              
+
+               {/* <input onChange = {e => emailHandler(e)} value={email} onBlur = {e => blurHandler(e)} className='input_mail' name='email' type='email' placeholder='E-mail'/> */}
+
+               {/* {(emailMessage) && <div style={{color: 'rgb(196, 196, 196, 0.5)', fontSize:'10px'}}>{emailMessage}</div>} */}
+           {/* {(emailDirty && emailError) && <div style={{color:'#EF3125', fontSize:'10px'}}>{emailError}</div>} */}
+
+           
+               {/* <input  onChange = {e => passwordHandler(e)} value={password} onBlur = {e => blurHandler(e)}  className='input_password' name='password'  type='password' placeholder='Пароль'/>
+
+               {(passwordDirty && passwordError) && <div style={{color:'#EF3125', fontSize:'10px'}}>{passwordError}</div>} */}
+
+               {/* <div className='rememberMe'>
                     <div><input type='checkbox'/>Запомнить меня</div>
                     <div>Забыли пароль?</div>
-               </div>
+               </div> */}
                
-                   <button disabled={!formValid} onClick={() => dispatch(login(email,password))}  className='login_btn'>Войти</button>
+                   {/* <button disabled={!formValid} onClick={() => dispatch(login(email,password))}  className='login_btn'>Войти</button> */}
                
-           </div>
+           {/* </div> */}
 
-           <div className='reg_travio'>
+           {/* <div className='reg_travio'>
                <div className='reg_text'>Еще нет аккаунта?
               Зарегистрируйтесь в TRAV.IO!</div>
                <button className='reg_btn'>Зарегистрироваться</button>
+           </div> */}
            </div>
-
        </div>
    ) 
 }
