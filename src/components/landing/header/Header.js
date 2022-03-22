@@ -8,9 +8,11 @@ export default function Header() {
     return(
              
          <div className='header'>
-           <div className='header_inner'>
+           {/* <div className='header_inner'> */}
 
                <div className='header_inner1'>
+
+               <div className='header_inn1'>
 
                    <div className='logo'>
                    <img src='/images/logo.svg'/>
@@ -19,7 +21,8 @@ export default function Header() {
                    <div className='nav'>
 
                        <div className='search'>
-                       <FaSearch className='imgSearch'/>
+                       <div className='input_search'><input type='text' placeholder='Поиск' />  
+                       <FaSearch className='imgSearch'/></div>
                        <button className='reg_btn'>Регистрация</button>
                        <Link to='/login'><button className='log_btn'>Вход</button></Link>
                        </div>
@@ -34,21 +37,24 @@ export default function Header() {
                        </div>
 
                    </div>
+                   </div>
 
                </div>
 
                <div className='header_inner2'>
+               <div className='header_inn2'>
                    <div className='travio'>Travio</div>
                    <div className='opis'>Автоматизированное решение,призванное упростить процесс переработки отходов для предприятий.</div>
                     <button className='join'>Присоединиться</button>
                </div>
+            </div>
 
            </div>
            
             
 
-            {/* <Link to='/login'><button className='log_btn'>Вход</button></Link> */}
-         </div>
+          
+     
 
        
    

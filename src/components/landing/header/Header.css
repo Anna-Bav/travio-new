@@ -16,22 +16,30 @@
   flex-direction: column;
   align-items: center;
 }
-.header_inner {
+.header_inn1 {
   width: 67.2%;
   height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .header_inner1 {
   width: 100%;
   height: 19.6%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+}
+.header_inner1:hover {
+  background: #ffffff;
 }
 .logo {
   width: 11.3%;
   height: 100%;
   display: flex;
   align-items: center;
+}
+.logo img:hover {
+  color: #69bf45;
 }
 .nav {
   width: 57.5%;
@@ -46,9 +54,47 @@
   align-items: center;
   justify-content: end;
 }
+.input_search {
+  width: 68.6%;
+  height: 40.7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.input_search input {
+  background-color: transparent;
+  border: none;
+  width: 97.6%;
+  height: 100%;
+}
+
+.header_inner1:hover .input_search {
+  border: 2px solid #398eb1;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.header_inner1:hover .input_search input {
+  border: none;
+  background-color: transparent;
+  width: 97.6%;
+  height: 100%;
+}
+.input_search input:focus{
+border: none;
+}
+.input_search input::placeholder {
+  color: transparent;
+}
+.header_inner1:hover .input_search input::placeholder {
+  color: #cccccc;
+}
+
 .imgSearch {
-  width: 2.4%;
+  /* width: 2.4%; */
   color: #ffffff;
+}
+.header_inner1:hover .imgSearch {
+  color: #398eb1;
 }
 .reg_btn {
   width: 16.7%;
@@ -59,8 +105,8 @@
   font-size: 15px;
   font-style: normal;
   line-height: 18px;
-  background-color: transparent;
-  border: 1px solid #ffffff;
+  background-color: #69bf45;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-left: 5.8%;
@@ -75,15 +121,21 @@
   font-style: normal;
   line-height: 18px;
   background-color: transparent;
-  border: 1px solid #ffffff;
+  border: 2px solid #ffffff;
   border-radius: 5px;
   cursor: pointer;
   margin-left: 25px;
 }
-.reg_btn:hover, .log_btn:hover{
+.header_inner1:hover .log_btn{
+  background-color: #ffffff;
+  border: 2px solid #398eb1;
+  color: #398eb1;
+}
+.header_inner1:hover .log_btn:hover {
   color: #ffffff;
-  background-color: #69BF45;
-  border:none;
+  background-color: #398eb1;
+  border: none;
+  
 }
 .navs {
   width: 100%;
@@ -101,10 +153,10 @@
   line-height: 18px;
   cursor: pointer;
 }
-.navs1:hover {
-  color: #ffffff;
+.header_inner1:hover .navs1:hover {
+  color: #398eb1;
   font-weight: 600;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 2px solid #398eb1;
 }
 .navs2 {
   color: #ffffff;
@@ -115,13 +167,28 @@
   line-height: 18px;
   cursor: pointer;
 }
+.header_inner1:hover .navs2{
+  color: #398eb1;
+}
+.header_inner1:hover .navs2:hover{
+  border-bottom: 2px solid #398eb1;
+}
 .header_inner2 {
   width: 100%;
   height: 80.4%;
   display: flex;
-  flex-direction: column;
-  align-items: start;
   justify-content: center;
+  /* flex-direction: column;
+  align-items: start;
+  justify-content: center; */
+}
+.header_inn2 {
+  width: 67.2%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
 .travio {
   color: #ffffff;
@@ -142,16 +209,22 @@
   line-height: 30px;
   margin-bottom: 7%;
 }
-.join{
-    width:14.7%;
-    height:6%;
-    color: #ffffff;
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    font-style: normal;
-    line-height: 21.6px;
-    background-color: transparent;
-    border: 1px solid #ffffff;
-    cursor: pointer;
+.join {
+  width: 14.7%;
+  height: 6%;
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 21.6px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.join:hover {
+  color: #ffffff;
+  background-color: #398eb1;
+  border: none;
 }

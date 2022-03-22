@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-bottom: 1px solid #69bf45;
+  border-bottom: 2px solid #69bf45;
 }
 .work_inner {
   width: 100%;
@@ -32,7 +32,7 @@
   font-size: 41px;
   font-style: normal;
   line-height: 49.2px;
-  border-bottom: 1px solid #69bf45;
+  border-bottom: 2px solid #69bf45;
 }
 .work_inner1_inn {
   width: 67.2%;
@@ -80,7 +80,7 @@
   font-style: normal;
   line-height: 18px;
   background-color: transparent;
-  border: 1px solid #69bf45;
+  border: 2px solid #69bf45;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -120,6 +120,11 @@
   font-style: normal;
   line-height: 22px;
   cursor: pointer;
+}
+.simply_join:hover {
+  color: #ffffff;
+  background-color: #398eb1;
+  border: none;
 }
 .work_img {
   width: 57.4%;

@@ -98,7 +98,7 @@ export default function Login(props) {
 
                <div className='login_inner2'>
                <div className='reg_text'>Еще нет аккаунта? Зарегистрируйтесь в TRAV.IO!</div>
-               <button className='reg_btn'>Зарегистрироваться</button>
+               <button className='reg_button'>Зарегистрироваться</button>
                </div>
 
 

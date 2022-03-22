@@ -142,16 +142,18 @@
   line-height: 37px;
   text-align: center;
 }
-.reg_btn {
+.reg_button {
   width: 46.7%;
   height: 24.8%;
   border-radius: 5px;
   background-color: #69bf45;
+  color: #ffffff;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 18px;
   font-style: normal;
   line-height: 21.6px;
+  border: none;
   cursor: pointer;
 }
 /* .logo {
