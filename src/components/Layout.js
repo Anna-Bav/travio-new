@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Landing from './landing/Landing';
 import Login from './login/Login';
+import Registration from './registration/Registration';
 import { useSelector } from "react-redux";
 
 
@@ -19,6 +20,7 @@ export default function Layout() {
         {/* <Routes> */}
             <Route exact path='/' render={()=><Landing />}/>
             <Route path="/login" render={() => <Login/>}/>
+            <Route path='/registration' render={() => <Registration/>}/>
             <Route path="/landing" render={() => <Landing />} />
         </Switch>
         {/* </Routes> */}

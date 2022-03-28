@@ -37,7 +37,6 @@
   border-radius: 20px;
   /* padding-top: 10px;
   padding-bottom: 10px; */
-
 }
 .login_title {
   color: #333333;
@@ -55,6 +54,9 @@
   font-size: 12px;
   font-style: normal;
   line-height: 14.09px;
+  /* display: flex;
+  justify-content: start;
+  align-items: start; */
 }
 .input_mail,
 .input_password {

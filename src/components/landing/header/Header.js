@@ -23,7 +23,7 @@ export default function Header() {
                        <div className='search'>
                        <div className='input_search'><input type='text' placeholder='Поиск' />  
                        <FaSearch className='imgSearch'/></div>
-                       <button className='reg_btn'>Регистрация</button>
+                       <Link to='/registration'><button className='reg_btn'>Регистрация</button></Link>
                        <Link to='/login'><button className='log_btn'>Вход</button></Link>
                        </div>
 
