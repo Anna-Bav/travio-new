@@ -20,6 +20,8 @@ export default function Registration(props) {
     const [colorType, setColorType] = useState('#333333');
     const [colorLatin, setColorLatin] = useState('#333333');
     const [colorNumber, setColorNumber] = useState('#333333');
+    const [colorSpecial, setColorSpecial] = useState('#333333');
+    const [colorLower, setColorLower] = useState('#333333');
     const [colorUpper, setColorUpper] = useState('#333333');
 
 
@@ -56,27 +58,45 @@ export default function Registration(props) {
                 setColorType('green')
             }
 
-
-            const regix = '?=.*[a-z])(?=.*[A-Z]';
-            if (regix.test(String(e.target.value))){
-            // if (e.target.value = /^[a-zA-Z]+$/) {
+           
+           const regexp1 = /([a-zA-Z])/;
+            if (regexp1.test(e.target.value)) {
+                // console.log('1', regexp1.test(e.target.value))
                 setColorLatin('green')
             } else {
+                // console.log('2', regexp1.test(e.target.value))
                 setColorLatin('red')
             }
 
-            if (e.target.value = /^\d+$/) {
-                setColorNumber('green')
+             
+            const regexp2 = /([0-9])/;
+            if (regexp2.test(e.target.value)) {
+               setColorNumber('green')
             } else {
-                setColorNumber('red')
+               setColorNumber('red')
             }
 
-            
-            if (e.target.value = /^([A-Z]+$)/) {
+            const regexp3 = /([$&+,:;=?@#|'<>.^*()%!-])/;
+            if (regexp3.test(e.target.value)) {
+               setColorSpecial('green')
+            } else {
+               setColorSpecial('red')
+            }
+
+            const regexp4 = /([a-z])/;
+            if (regexp4.test(e.target.value)) {
+               setColorLower('green')
+            } else {
+               setColorLower('red')
+            }
+
+            const regexp5 = /([A-Z])/;
+            if (regexp5.test(e.target.value)) {
                 setColorUpper('green')
             } else {
                 setColorUpper('red')
             }
+           
         }
           
         
@@ -134,11 +154,12 @@ export default function Registration(props) {
                   <div className='must_title'>Пароль должен:</div>
                   
                   {/* <div >
-                      <div className='visualBtn' style={{position:"relative",
-    width: "10px",
-    height: "10px",
-    border: "1px solid black",
-    borderRadius: "50%"}}>
+                      <div className='visualBtn' 
+                      style={{position:"relative",
+                        width: "10px",
+                        height: "10px",
+                        border: "1px solid black",
+                        borderRadius: "50%"}}>
                       <svg style={{width:"10px", height:"10px", position:"absolute"}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" enable-background="new 0 0 50 50">
                           <path d="M37.304 11.282l1.414 1.414-26.022 26.02-1.414-1.413z"/>
                   <path d="M12.696 11.282l26.022 26.02-1.414 1.415-26.022-26.02z"/>
@@ -147,8 +168,8 @@ export default function Registration(props) {
                   <div className='must_text' style={{color:colorType}}><input  type='radio'/>содержать не менее 8 и не более 14 символов;</div>
                   <div className='must_text' style={{color:colorLatin}}><input  type='radio'/>состоять из букв латинского алфавита (aA-zZ);</div>
                   <div className='must_text' style={{color:colorNumber}}><input  type='radio'/>содержать не менее одной арабской цифры (0-9);</div>
-                  <div className='must_text'><input  type='radio'/>содержать один из спецсимволов [!] [@] [#] [$] [%] [^] [&] [*];</div>
-                  <div className='must_text'><input  type='radio'/>не менее одной латинской буквы в нижнем регистре;</div>
+                  <div className='must_text' style={{color:colorSpecial}}><input  type='radio'/>содержать один из спецсимволов [!] [@] [#] [$] [%] [^] [&] [*];</div>
+                  <div className='must_text' style={{color:colorLower}}><input  type='radio'/>не менее одной латинской буквы в нижнем регистре;</div>
                   <div className='must_text' style={{color:colorUpper}}><input  type='radio'/>не менее одной латинской буквы в верхнем регистре.</div>
 
               </div>
