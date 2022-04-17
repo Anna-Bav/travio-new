@@ -134,3 +134,22 @@
 .work_img img {
   width: 100%;
 }
+
+@media (max-width: 1440px) {
+  .simply_btn1,
+  .simply_btn2,
+  .simply_btn3 {
+    font-size: 11px;
+}
+.this_simply {
+  font-size: 54px;
+  
+}
+.simply_text {
+  font-size: 16px;
+  
+}
+.simply_join {
+  font-size: 16px;
+}
+}

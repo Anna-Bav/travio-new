@@ -7,6 +7,7 @@
   width: 100%;
   height: 5.5%;
   display: flex;
+  box-sizing: border-box;
 }
 .mission_1 {
   width: 51.1%;
@@ -63,4 +64,16 @@
 .mission_2 {
   width: 48.9%;
   height: 100%;
+}
+.mission_2 img{
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1440px) {
+  .our_mission{
+   font-size: 40px;
+}
+.mission_btn{
+  font-size: 17px;
+}
 }

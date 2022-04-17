@@ -81,6 +81,9 @@
   align-items: start;
   justify-content: space-around;
 }
+.footer_inner2 img{
+  width:100%;
+}
 .rights {
   /* width: 85.5%; */
   color: #ffffff;
@@ -98,4 +101,20 @@
 }
 .socials img {
   margin-left: 9.1%;
+}
+@media (max-width: 1440px) {
+  .aboutUs1, .aboutUs2, .rights  {
+    font-size: 13px;
+    
+  }
+  .aboutUs {
+    height: 44.1%;
+  }
+  .help {
+    height:85%;
+    
+  }
+  .docs {
+    height: 57.1%;
+  }
 }

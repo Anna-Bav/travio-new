@@ -275,3 +275,27 @@
   border-radius: 107.31px;
   cursor: pointer;
 } */
+@media (max-width: 1440px) {
+
+  .login_inner1 {
+    height: 58.6%;
+  }
+  .login_title {
+    font-size: 29px;
+  }
+  .remember, .forget {
+    font-size: 14px;
+  }
+  .login_btn {
+    font-size: 14px;
+  }
+  .reg_text {
+    font-size: 23px;
+   
+  }
+  .reg_button {
+    font-size: 16px;
+    
+  }
+ 
+}

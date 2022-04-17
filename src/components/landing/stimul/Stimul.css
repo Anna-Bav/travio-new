@@ -46,3 +46,26 @@
     align-items: center;
     justify-content: space-between;
 }
+/* .stimul_inner3 img{
+  width:100%;
+} */
+
+.stimul_inner3_img img{
+  width:100%;
+}
+@media (max-width: 1440px) {
+  .stimul_inner1 {
+    
+    font-size: 36px;
+    
+  }
+  .stimul_inner2 {
+    
+    font-size: 17px;
+   
+  }
+  .stimul_inner3 img{
+   width:100%;
+}
+
+}

@@ -108,3 +108,18 @@
   border: none;
   cursor: pointer;
 }
+@media (max-width: 1440px) {
+  .reg_inner1 {
+    font-size: 26px;
+  }
+  .must_title, .must_text{
+    font-size: 11px;
+  }
+  .rules {
+    font-size: 10.1px;
+  }
+  .registr_btn {
+    font-size: 14px;
+    
+  }
+}

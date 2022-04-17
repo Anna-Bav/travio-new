@@ -4,13 +4,14 @@ import { setUser } from "../reducers/userReducer";
 import jwt_decode from "jwt-decode";
 
 export const registration = (email, password) => {
+  console.log(email + " " + password + " " );
   return async (dispatch) => {
     try {
-      const response = await axios.post("https://travi0.herokuapp.com/registration", {
+      const response = await axios.post("https://travi0.herokuapp.com/logged_in_one", {
         email,
         password,
       });
-      console.log(response)
+      console.log("I registered" + response)
      await dispatch(setUser(response.data.user));
      await localStorage.setItem("token", response.data.refresh_token);
     } catch (e) {
@@ -32,7 +33,7 @@ export const login = (email, password) => {
       dispatch(setUser(response.data.user));
       localStorage.setItem("token", response.data.access_token);
       console.log("I have token");
-      return <Redirect to="main" />;
+      // return <Redirect to="main" />;
     } catch (e) {
       console.log("token not given");
     }

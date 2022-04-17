@@ -23,7 +23,7 @@ export default function Registration(props) {
     const [colorSpecial, setColorSpecial] = useState('#333333');
     const [colorLower, setColorLower] = useState('#333333');
     const [colorUpper, setColorUpper] = useState('#333333');
-
+    const [passwordConfirm, setPasswordConfirm] = useState();
 
 
     useEffect( () => {
@@ -48,7 +48,7 @@ export default function Registration(props) {
         const passwordHandler = (e) => {
             setPassword(e.target.value)
             if(e.target.value.length < 8 || e.target.value.length > 14) {
-                setPasswordError('Пароль должен быть не менее 8 и не более 14 символов')
+                setPasswordError('Некорректный пароль')
                 setColorType('red');
                 if(!e.target.value) {
                     setPasswordError('Пароль не может быть пустым')
@@ -59,6 +59,10 @@ export default function Registration(props) {
             }
 
            
+           
+
+
+
            const regexp1 = /([a-zA-Z])/;
             if (regexp1.test(e.target.value)) {
                 // console.log('1', regexp1.test(e.target.value))
@@ -66,6 +70,7 @@ export default function Registration(props) {
             } else {
                 // console.log('2', regexp1.test(e.target.value))
                 setColorLatin('red')
+                setPasswordError('Некорректный пароль')
             }
 
              
@@ -74,6 +79,7 @@ export default function Registration(props) {
                setColorNumber('green')
             } else {
                setColorNumber('red')
+               setPasswordError('Некорректный пароль')
             }
 
             const regexp3 = /([$&+,:;=?@#|'<>.^*()%!-])/;
@@ -81,6 +87,7 @@ export default function Registration(props) {
                setColorSpecial('green')
             } else {
                setColorSpecial('red')
+               setPasswordError('Некорректный пароль')
             }
 
             const regexp4 = /([a-z])/;
@@ -88,6 +95,7 @@ export default function Registration(props) {
                setColorLower('green')
             } else {
                setColorLower('red')
+               setPasswordError('Некорректный пароль')
             }
 
             const regexp5 = /([A-Z])/;
@@ -95,13 +103,33 @@ export default function Registration(props) {
                 setColorUpper('green')
             } else {
                 setColorUpper('red')
+                setPasswordError('Некорректный пароль')
             }
+
+
+           
            
         }
           
-        
-                  
-            
+         
+            const passwordConfirmation = (e) => {
+                // setPassword(e.target.value)
+                // if(!e.target.value) {
+                //     setPasswordConfirm('Пароли не совпадают')
+                // }
+                console.log (password)
+                if (e.target.value == password) {
+                    setPasswordConfirm('')
+                } else {
+                    setPasswordConfirm('Пароли не совпадают')
+                }
+                
+                // if (document.getElementById('password').value !=
+                // document.getElementById('confirm_password').value) {
+                //     setPasswordConfirm('Пароли не совпадают')
+                //     console.log(e.target.value)
+                // }
+            }
 
 
                
@@ -145,8 +173,8 @@ export default function Registration(props) {
 
               <div className='mail_adress'>Подтвердить пароль</div>
              
-              <input onChange = {e => passwordHandler(e)} value={password} onBlur = {e => blurHandler(e)} className="reg_password" name='password'  type='password' />
-              {(passwordDirty && passwordError) && <div style={{color:'#EF3125', fontSize:'10px'}}>{passwordError}</div>}
+              <input onChange = {e => passwordConfirmation(e)}  onBlur = {e => blurHandler(e)} className="reg_password" name='password'  type='password' />
+              {(passwordConfirm) && <div style={{color:'#EF3125', fontSize:'10px'}}>{passwordConfirm}</div>}
 
               
 

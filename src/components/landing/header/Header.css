@@ -227,3 +227,39 @@
   background-color: #398eb1;
   border: none;
 }
+
+@media (max-width: 1440px) {
+  .reg_btn {
+    width: 124px;
+    height: 34px;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 17px;
+    margin-left: 5.8%;
+  }
+  .log_btn {
+    width: 67px;
+    height: 34px;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 17px;
+    margin-left: 20px;
+  }
+  .navs1 {
+    font-size: 13px;
+   
+  }
+  .navs2 {
+    font-size: 13px;
+  }
+  .travio {
+   font-size: 55px;
+  }
+  .opis {
+    font-size: 19px;
+  }
+  .join {
+    width: 16.7%;
+    font-size: 16px;
+  }
+}

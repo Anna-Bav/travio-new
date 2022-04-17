@@ -79,3 +79,14 @@
 .main_inner2 img {
   width: 100%;
 }
+@media (max-width: 1440px) {
+  .main_inner2 {
+    height: 85%;
+  }
+  .mains_text1,
+  .mains_text2,
+  .mains_text3,
+  .mains_text4 {
+   font-size: 14px;
+}
+}

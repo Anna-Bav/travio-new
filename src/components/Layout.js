@@ -21,7 +21,7 @@ export default function Layout() {
             <Route exact path='/' render={()=><Landing />}/>
             <Route path="/login" render={() => <Login/>}/>
             <Route path='/registration' render={() => <Registration/>}/>
-            <Route path="/landing" render={() => <Landing />} />
+            {/* y */}
         </Switch>
         {/* </Routes> */}
         </BrowserRouter>
